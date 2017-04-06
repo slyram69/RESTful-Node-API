@@ -12,6 +12,8 @@ const mongodbUri = 'mongodb://slyram69:Lazane03@ds011495.mlab.com:11495/api-sly'
 const mongooseUri = uriUtil.formatMongoose(mongodbUri);
 const dbOptions = {};
 
+app.use(express.static(__dirname + "/client"));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
